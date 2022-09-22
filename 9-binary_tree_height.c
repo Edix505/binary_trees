@@ -25,6 +25,12 @@ void node_height(const binary_tree_t *tree, size_t h, size_t *height)
 	}
 }
 
+/**
+ * binary_tree_height
+ * @tree
+ *
+ * Return
+ */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t height = 0;
