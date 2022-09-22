@@ -6,7 +6,7 @@
 *
 * Return: no return.
 */
-void node_height_2(const binary_tree_t *tree, size_t h, size_t *height)
+void node_height(const binary_tree_t *tree, size_t h, size_t *height)
 {
 	if (tree != NULL)
 	{
@@ -19,8 +19,8 @@ void node_height_2(const binary_tree_t *tree, size_t h, size_t *height)
 		}
 		else
 		{
-			node_height_2(tree->left, h + 1, height);
-			node_height_2(tree->right, h + 1, height);
+			node_height(tree->left, h + 1, height);
+			node_height(tree->right, h + 1, height);
 		}
 	}
 }
@@ -29,6 +29,6 @@ size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t height = 0;
 
-	node_height_2(tree, 0, &height);
+	node_height(tree, 0, &height);
 	return (height);
 }
